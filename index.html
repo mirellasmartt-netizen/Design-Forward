@@ -713,6 +713,80 @@
 
       .print-hide { display: none !important; }
     }
+
+    /* ── Feedback bar ── */
+    .feedback-bar {
+      grid-column: 1 / -1;
+      background: var(--navy);
+      padding: 48px 64px;
+    }
+    .feedback-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+    .feedback-left { flex: 1; }
+    .feedback-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .feedback-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .feedback-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.65;
+      margin: 0;
+      max-width: 480px;
+    }
+    .feedback-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .feedback-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .15s, transform .1s;
+      white-space: nowrap;
+    }
+    .feedback-btn:hover {
+      background: #b81c21;
+      transform: translateY(-1px);
+    }
+    .feedback-note {
+      font-size: 11px;
+      color: rgba(255,255,255,.35);
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .feedback-bar { padding: 36px 24px; }
+      .feedback-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .feedback-right { align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
@@ -750,6 +824,7 @@
       <a href="#ai-fit" class="nav-link">Where AI fits</a>
       <a href="#pilot" class="nav-link">Pilot plan</a>
       <a href="#asks" class="nav-link">Questions for the team</a>
+      <a href="#feedback" class="nav-link">Share your thoughts</a>
     </div>
   </nav>
 
@@ -1266,6 +1341,24 @@
     </section>
 
   </main>
+
+  <!-- Share your thoughts -->
+  <div class="feedback-bar" id="feedback">
+    <div class="feedback-inner">
+      <div class="feedback-left">
+        <div class="feedback-eyebrow">Share your thoughts</div>
+        <div class="feedback-title">Your input shapes what happens next</div>
+        <p class="feedback-desc">I'm in early listening mode and genuinely want to understand what resonates, what doesn't, and what I might be missing. Honest pushback is more useful to me than polite agreement. Takes about five minutes.</p>
+      </div>
+      <div class="feedback-right">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSca510Aw8PHrmv-EBy5I8Lm-72D2ePdwyP5hHznj4G2KE9xeg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="feedback-btn">
+          Open feedback form
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="feedback-note">Responses go directly to Mirella G. Smartt</div>
+      </div>
+    </div>
+  </div>
 
 </div><!-- end page-wrap -->
 
